@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groupie-Tracker</title>
+</head>
+<body>
+    <h1>Groupie-Tracker</h1>
+    <P>Artists makes the Music and Music Touches a part of our life.</P>
+    {{ range .}}
+        <img src="{{.Image}}" alt="Artists image"><br>
+        <p>{{.Name}}</p>
+        <p>Creation Date: {{.CreationDate}}</p>
+        <p>First Album released: {{.FirstAlbum}}</p>
+        <p>Members</p>
+        <ol>
+            {{range .Members}}
+                <li>{{.}}</li>
+            {{end}}
+        </ol>
+        <a href="/locations?artistId={{.Id}}&name={{.Name}}">Locations</a>
+        <br>
+        <a href="/dates?artistId={{.Id}}&name={{.Name}}">Dates</a>
+        <br>
+        <a href="/relations?artistId={{.Id}}&name={{.Name}}">Relations</a>
+
+        <hr>
+        {{end}}
+        
+</body>
+</html>

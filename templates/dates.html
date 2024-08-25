@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dates</title>
+</head>
+<body>
+    <h1>{{.Name}}</h1>
+    <h3>Dates</h3>
+    <ol>
+        {{range .Dates.Dates}}
+            <li>{{.}}</li>
+        {{end}}
+    </ol>
+</body>
+</html>

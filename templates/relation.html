@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relations</title>
+</head>
+<body>
+    <h1>{{.Name}}</h1>
+    <h3>Relations</h3>
+    <ol>
+        {{range .Relation.Relation.DatesLocations}}
+            <li>{{.key}}: {{.value}}</li>
+        {{end}}
+    </ol>
+</body>
+</html>
